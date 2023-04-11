@@ -1,0 +1,8 @@
+export {default as DefaultLayout} from './layout/Default_Layout'
+export {default as Login} from './login-register/login/Login'
+export {default as Register} from './login-register/register/Register'
+export {default as Home} from './home/Home'
+export {default as Header} from './header/Header'
+export {default as Footer} from './footer/Footer'
+export {default as ManageUser} from './manage_user/Manage_User'
+export {default as AdminUser} from './admin_user/Admin_User'

@@ -1,0 +1,35 @@
+
+.loading--1 {
+    position: absolute;
+    /* border-top: 10px solid transparent; */
+    border-radius: 50%;
+    border-top: 8px solid #fbb233;
+    border-right: 8px solid #03bebe;
+    border-bottom: 8px solid #fbb233;
+    border-left: 8px solid #03bebe;
+    animation: spin1 3.5s linear infinite;
+    width: 120px;    
+    height: 120px;
+    top: -8px;
+    left: -8px;
+}
+@keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+
+    }
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+@keyframes spin2 {
+    0% {
+        transform: rotate(360deg);
+
+    }
+    100% {
+        transform: rotate(0deg);
+
+    }
+}

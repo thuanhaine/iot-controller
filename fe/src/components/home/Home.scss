@@ -1,0 +1,93 @@
+.home {
+  min-height: 75vh;
+
+  .container {
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 10%;
+    border: 4px #ccc solid;
+    border-radius: 8px;
+    position: relative;
+    
+    .icon-light {
+      position: absolute;
+      top: -80px;
+      left: calc(50% - 40px);
+      font-size: 80px;
+    }
+    .title {
+      text-align: center;   
+    }
+    .screen {
+      height: 80px;
+      display: flex;
+      padding: 0 10%;
+      gap: 20%;
+      .left {
+        height: 80px;
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+        .text {
+          font-size: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        h2{
+          font-size: 42px;
+        }
+        .color-red {
+          font-size: 38px;
+          color: rgb(255, 37, 37);
+          margin-top: 2px;
+        }
+      }
+      .right {
+        height: 80px;
+        flex: 1;
+        text-align: center;
+
+        .text {
+          font-size: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+        h2{
+          font-size: 42px;
+        }
+        .color-blue {
+          color: blue;
+          font-size: 38px;
+        }
+      }
+    }
+
+    .properties {
+      margin-top: 40px;
+        text-align: center;   
+
+        
+    }
+    .active {
+      position: absolute;
+      left: calc(50% - 25px);
+      bottom: 20px;
+      align-items: center;
+
+      .active-btn {
+        font-size: 50px;
+
+        &:hover {
+          cursor: pointer;
+          opacity: .7;
+        }
+      }
+    }
+  }
+}

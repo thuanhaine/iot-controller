@@ -1,0 +1,159 @@
+
+
+
+.register {
+    display: flex;
+    /* background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%); */
+    background-color: #F0F5F8;
+    position: relative;
+    margin:0 30%;
+    margin-top: 6%;
+    padding: 32px;
+
+
+    .register-left {
+        flex: 1;
+        position: relative;
+
+        .register-left--logo {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: -76px;
+            left: calc(50% - 60px);
+            border-radius: 50%;
+            background-color: rgb(193, 228, 248);
+        }
+        .register-loading{
+            position: absolute;
+            top: -76px;
+            left: calc(50% - 60px);
+        }
+        .register-content {
+            width: auto;
+            height: 600px;
+            background-color: white;
+            border-radius: 25px;
+            padding: 18px;
+            
+            .register-title {
+                text-align: center;
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 38px;
+                color: rgb(228, 74, 125);
+                padding-top: 5%;
+            }
+            .register-input-form {
+            
+                margin: 32px;
+                
+
+
+                .boder-red {
+                    border-color: red;
+                }
+            }
+            .btn-register {
+                width: 200px;
+                height: 40px;
+                background: linear-gradient(135deg, rgb(228, 74, 125) 0%,     rgba(253,187,45,1) 100%);
+                color: white;
+                font-size: 26px;
+                font-weight: 500px;
+                border-radius: 25px;
+                border: none;
+                margin: 32px 0;
+                margin-left: calc(50% - 100px);
+
+                &:hover {
+                    cursor: pointer;
+                    background: linear-gradient(45deg, rgba(253,187,45,1) 0%,     rgb(228, 74, 125) 100%);
+                
+                }
+            
+            }
+           
+           
+            .register-input-span {
+                display: block;
+                font-weight: 500px;
+                font-size: 18px;
+                opacity: .7;
+                margin: 8px 16px;
+            
+            
+            }
+            .register-input-box {
+             width: 100%;
+             border: none;
+             margin: 0;
+             border: 1px solid #ebebeb;
+             padding: 17px 20px;
+             box-sizing: border-box;
+             font-size: 14px;
+             font-weight: 500;
+             color: #222;
+            }
+            
+            .btn__register-route {
+                text-decoration: none;
+                color: white;
+
+                .text-forgotPW{
+                    margin-left: 8%;
+                }
+            }
+           
+            .text__forgot {
+                margin: 16px 0;
+            }
+            .mr-16 {
+                margin: 16px 0;
+            }
+            .mr-32 {
+                margin: 32px 0;
+            }
+            .register__more {
+                text-align: center;
+                margin-top: 50px;
+            }
+            .register__more-text {
+                font-size: 20px;
+                color: rgb(24, 23, 23);
+                
+            }
+            .register__more-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+            }
+            .register__more-icon i {
+                font-size: 26px;
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+                line-height: 50px;
+                cursor: pointer;
+                margin: 16px 0;
+            }
+            .google {
+                background-color:rgb(250, 9, 9);
+                color: white;
+            }
+            .facebook {
+                background-color:rgb(0, 132, 255);
+                color: white;
+            }
+            .twitter {
+                background-color:rgb(3, 190, 190);
+                color: white;
+            }
+            
+        }
+
+    }
+
+
+}
