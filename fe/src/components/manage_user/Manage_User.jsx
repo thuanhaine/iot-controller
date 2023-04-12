@@ -27,21 +27,38 @@ function Manage_User() {
       if (snapshot.exists()) {
         console.log(data);
         setValue(data);
-        setIsLight(data.light);
         setIsFan(data.blower);
+        setIsLight(data.light);
+
+        if (data.auto == true && data.blower == data.light) {
+          const blower = ref(firebase, "Device/blower");
+          get(blower).then((snapshot) => {
+            set(blower, !data.light);
+          });
+        }
       }
     });
   }, []);
 
   const handleChangeAuto = () => {
     const autoValue = ref(firebase, "Device/auto");
-
     get(autoValue).then((snapshot) => {
       const currentValue = snapshot.val();
+      console.log("currentValue", currentValue);
       if (currentValue) {
         set(autoValue, !currentValue);
       } else {
         set(autoValue, !currentValue);
+        if (value.tempontime <= value.checktemp) {
+          const light = ref(firebase, "Device/light");
+          get(light).then((snapshot) => {
+            const currentValue = snapshot.val();
+            if (!currentValue) {
+              console.log("hello");
+              set(light, true);
+            }
+          });
+        }
       }
     });
   };
@@ -81,6 +98,18 @@ function Manage_User() {
       if (valueCheckTemp) {
         set(checktemp, valueCheckTemp);
         setValue({ ...value, checktemp: valueCheckTemp });
+
+        const light = ref(firebase, "Device/light");
+        get(light).then((snapshot) => {
+          const currentValue = snapshot.val();
+          if (value.tempontime <= valueCheckTemp) {
+            console.log("hello");
+            set(light, true);
+          } else {
+            console.log("hello false");
+            set(light, false);
+          }
+        });
       } else {
         set(checktemp, currentValue);
       }
