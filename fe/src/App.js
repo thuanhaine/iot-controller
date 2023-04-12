@@ -23,18 +23,6 @@ function App() {
       fetch(`${process.env.REACT_APP_API}/users/` + userId, {
         method: "GET",
       })
-        // .then((res) => {
-        //   if (res.status == 200) {
-        //     res.json().then((data) => setUser(data));
-        //     console.log("userrrr: " + user);
-        //     setIsLogin(true);
-        //     console.log(user);
-        //   } else {
-        //     setIsLogin(false);
-        //     navigate("/login");
-        //   }
-        // });
-
         .then((res) => res.json())
         .then((data) => {
           setUser(data);
@@ -61,7 +49,6 @@ function App() {
                 key={index}
                 path={route.path}
                 element={
-                  // <Layout  onHandleLogout={handleLogout}>
                   <Layout>
                     <Page />
                   </Layout>
@@ -83,7 +70,6 @@ function App() {
                 key={index}
                 path={route.path}
                 element={
-                  // <Layout  onHandleLogout={handleLogout}>
                   <Layout>
                     <Page />
                   </Layout>
@@ -104,7 +90,6 @@ function App() {
                 key={index}
                 path={route.path}
                 element={
-                  // <Layout  onHandleLogout={handleLogout}>
                   <Layout>
                     <Page />
                   </Layout>
@@ -123,63 +108,10 @@ function App() {
           Layout = route.layout;
         }
         const Page = route.component;
-        return (
-          <Route
-            key={index}
-            path={route.path}
-            element={
-              // <Layout  onHandleLogout={handleLogout}>
-              <Page />
-            }
-          />
-        );
+        return <Route key={index} path={route.path} element={<Page />} />;
       })}
     </Routes>
   );
 }
 
 export default App;
-
-// Admin_user.map((route, index) => {
-//   let Layout = DefaultLayout;
-//   if (route.layout === null) {
-//     Layout = Fragment;
-//   } else if (route.layout) {
-//     Layout = route.layout;
-//   }
-//   const Page = route.component;
-//   return (
-//     <Route
-//       key={index}
-//       path={route.path}
-//       element={
-//         // <Layout  onHandleLogout={handleLogout}>
-//         <Layout>
-//           <Page />
-//         </Layout>
-//       }
-//     />
-//   );
-// })
-
-// Manage_user.map((route, index) => {
-//   let Layout = DefaultLayout;
-//   if (route.layout === null) {
-//     Layout = Fragment;
-//   } else if (route.layout) {
-//     Layout = route.layout;
-//   }
-//   const Page = route.component;
-//   return (
-//     <Route
-//       key={index}
-//       path={route.path}
-//       element={
-//         // <Layout  onHandleLogout={handleLogout}>
-//         <Layout>
-//           <Page />
-//         </Layout>
-//       }
-//     />
-//   );
-// })
